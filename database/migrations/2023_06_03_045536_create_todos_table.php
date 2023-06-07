@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('model_id');
+            $table->bigInteger('todo_list_id');
             $table->string("title");
             $table->string("body");
             $table->boolean("completed");

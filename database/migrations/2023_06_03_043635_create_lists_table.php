@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lists', function (Blueprint $table) {
+        Schema::create('todo_lists', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('model_id');
+            $table->bigInteger('user_id');
             $table->string("title");
             $table->boolean("archived");
             $table->timestamps();
