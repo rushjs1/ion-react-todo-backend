@@ -9,13 +9,17 @@ class UserController extends Controller
 {
 
   public function show($id){
+    ray("foo");
 
-    $user = User::where('id', $id)->get();
+    $user = User::where('id', $id)->first();
 
     ray($user);
+
+    return $user;
   }
 
-  public function create($data){
-    ray($data);
+  public function store(Request $request){
+    ray('foo');
+    ray($request->all());
   }
 }
